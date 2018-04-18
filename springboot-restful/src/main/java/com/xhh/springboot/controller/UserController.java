@@ -1,7 +1,6 @@
 package com.xhh.springboot.controller;
 
 import com.xhh.springboot.entity.User;
-import com.xhh.springboot.repository.UserRepository;
 import com.xhh.springboot.service.UserService;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.*;
