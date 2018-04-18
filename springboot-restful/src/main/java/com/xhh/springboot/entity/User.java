@@ -1,8 +1,6 @@
 package com.xhh.springboot.entity;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.xhh.springboot.util.JsonDateSerializer;
-import org.springframework.format.annotation.DateTimeFormat;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -29,8 +27,7 @@ public class User implements Serializable {
     @Column(name = "name",length = 32,nullable = false)
     private String name;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @JsonSerialize(using = JsonDateSerializer.class)
+    @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd HH:mm:ss")
     @Column(name = "birthday")
     private Date birthday;
 
